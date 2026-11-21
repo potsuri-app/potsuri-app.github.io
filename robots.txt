@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /tmp-
 
 Sitemap: https://potsuri-app.github.io/sitemap.xml
