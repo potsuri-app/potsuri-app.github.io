@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ぽつり（Potsuri）| 仲良しだけの、新しいSNS</title>
-<meta name="description" content="ぽつり（Potsuri）は、仲良し3〜6人だけで近況を届け合う、新しいSNS。フォロワーも、いいねも、知らない人もいない。写真・声・ひとことは24時間で消える。まもなくApp Storeで公開。">
+<meta name="description" content="ぽつり（Potsuri）は、仲良し3〜6人だけで近況を届け合う、新しいSNS。フォロワーも、いいねも、知らない人もいない。写真・声・ひとことは24時間で消える。2026年11月25日（水）15時にApp Storeで公開。">
 <meta property="og:title" content="ぽつり（Potsuri）| 仲良しだけの、新しいSNS">
-<meta property="og:description" content="フォロワーも、いいねも、知らない人もいない。仲良し3〜6人だけの近況が、ホーム画面にそっと届く。Coming soon.">
+<meta property="og:description" content="フォロワーも、いいねも、知らない人もいない。仲良し3〜6人だけの近況が、ホーム画面にそっと届く。11月25日（水）15時、App Storeで公開。">
 <meta property="og:image" content="https://potsuri-app.github.io/img/og-cs.png">
 <link rel="canonical" href="https://potsuri-app.github.io/">
 <meta property="og:url" content="https://potsuri-app.github.io/">
@@ -60,6 +60,15 @@ a{color:inherit}
 .grad{background:linear-gradient(100deg,#8EA0FF 0%,#C9B5FF 40%,var(--lime) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.lead{margin:22px auto 0;max-width:30em;color:var(--darksub);font-size:clamp(15px,2.2vw,19px);line-height:1.9;opacity:0;animation:fadeUp 1s 1.4s forwards}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.cd{margin-top:26px;display:inline-flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fadeUp 1s 1.5s forwards}
+.cd-date{font-family:var(--n);font-weight:700;font-size:13px;letter-spacing:.18em;color:var(--lime)}
+.cd-row{display:flex;gap:10px}
+.cd-u{min-width:66px;padding:10px 8px 8px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);text-align:center}
+.cd-u b{display:block;font-family:var(--n);font-size:30px;line-height:1;font-variant-numeric:tabular-nums;color:#fff}
+.cd-u small{display:block;margin-top:6px;font-family:var(--n);font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.6)}
+.finale .cd{opacity:1;animation:none;margin:6px 0 4px}
+@media (max-width:420px){.cd-u{min-width:58px}.cd-u b{font-size:24px}}
+.live .cd{display:none}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fadeUp 1s 1.7s forwards}
 .badge{display:inline-flex;align-items:center;gap:12px;height:58px;padding:0 22px;border-radius:16px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;position:relative;overflow:hidden}
 .badge svg{width:24px;height:24px}
@@ -310,7 +319,8 @@ a{color:inherit}
     <img class="hero-mark" id="heroMark" src="img/mark.png" alt="ぽつりのロゴ">
     <div class="eyebrow">A new kind of social</div>
     <h1 id="title"><span class="t1">近況は、</span><br><span class="t2 grad">ぽつりと。</span></h1>
-    <p class="lead">フォロワーも、いいねも、知らない人もいない。<br>仲良し3〜6人だけの近況が、ホーム画面にそっと届く。<br>新しいSNS「ぽつり」、まもなく登場。</p>
+    <p class="lead">フォロワーも、いいねも、知らない人もいない。<br>仲良し3〜6人だけの近況が、ホーム画面にそっと届く。<br><span id="leadEnd">11月25日（水）15時、App Storeで公開。</span></p>
+    <div class="cd" aria-live="polite"><div class="cd-date">2026.11.25 WED 15:00 公開</div><div class="cd-row"><div class="cd-u"><b data-cd="d">--</b><small>DAYS</small></div><div class="cd-u"><b data-cd="h">--</b><small>HOURS</small></div><div class="cd-u"><b data-cd="m">--</b><small>MIN</small></div><div class="cd-u"><b data-cd="s">--</b><small>SEC</small></div></div></div>
     <div class="cta">
       <span class="badge" aria-label="App Storeで近日公開">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0B0A22" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.2 3-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.6-1-2.6-4.2zM14 5.3c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
@@ -504,7 +514,8 @@ a{color:inherit}
   <div class="inner">
     <div class="eyebrow rv">iPhone ・ 無料</div>
     <h2 class="cs rv"><span>COMING</span><span class="o">SOON</span></h2>
-    <p class="rv">ぽつりは、まもなくApp Storeで公開されます。<br>いちばん仲のいい友達と、いちばんに始めよう。</p>
+    <div class="cd" aria-live="polite"><div class="cd-date">2026.11.25 WED 15:00 公開</div><div class="cd-row"><div class="cd-u"><b data-cd="d">--</b><small>DAYS</small></div><div class="cd-u"><b data-cd="h">--</b><small>HOURS</small></div><div class="cd-u"><b data-cd="m">--</b><small>MIN</small></div><div class="cd-u"><b data-cd="s">--</b><small>SEC</small></div></div></div>
+    <p class="rv" id="finText">ぽつりは、11月25日（水）15時にApp Storeで公開されます。<br>いちばん仲のいい友達と、いちばんに始めよう。</p>
     <div class="cta rv">
       <span class="badge" aria-label="App Storeで近日公開">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0B0A22" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.2 3-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.6-1-2.6-4.2zM14 5.3c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
@@ -540,6 +551,34 @@ a{color:inherit}
     let j = 0; const n = [...txt].length;
     for (const c of txt) { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; s.style.backgroundPosition = (n > 1 ? (j++ / (n - 1)) * 100 : 0) + '% 0'; s.style.animationDelay = (delayBase + k++ * 0.07) + 's'; el.appendChild(s); }
   });
+
+  // ---- launch countdown (2026-11-25 15:00 JST) ----
+  const LAUNCH = Date.UTC(2026, 10, 25, 6, 0, 0);
+  const STORE = 'https://apps.apple.com/jp/app/id6837517077';
+  const pad = n => String(n).padStart(2, '0');
+  function goLive() {
+    document.body.classList.add('live');
+    $$('span.badge').forEach(b => {
+      const a = document.createElement('a');
+      a.className = 'badge'; a.href = STORE; a.target = '_blank'; a.rel = 'noopener';
+      a.setAttribute('aria-label', 'App Storeでダウンロード'); a.innerHTML = b.innerHTML;
+      const sm = a.querySelector('small'); if (sm) sm.textContent = 'DOWNLOAD ON THE';
+      b.replaceWith(a);
+    });
+    $$('.pill').forEach(p => p.textContent = 'NOW ON APP STORE');
+    const le = $('#leadEnd'); if (le) le.textContent = 'App Storeで公開中（無料）。';
+    const cs = $('.finale h2.cs'); if (cs) cs.innerHTML = '<span>NOW</span><span class="o">AVAILABLE</span>';
+    const ft = $('#finText'); if (ft) ft.innerHTML = 'ぽつりは、App Storeで公開中です。<br>いちばん仲のいい友達と、いちばんに始めよう。';
+  }
+  function cdTick() {
+    const left = LAUNCH - Date.now();
+    if (left <= 0) { goLive(); return; }
+    const s = Math.floor(left / 1000);
+    const v = { d: Math.floor(s / 86400), h: Math.floor(s % 86400 / 3600), m: Math.floor(s % 3600 / 60), s: s % 60 };
+    $$('[data-cd]').forEach(el => { const x = v[el.dataset.cd]; el.textContent = el.dataset.cd === 'd' ? x : pad(x); });
+    setTimeout(cdTick, 1000 - Date.now() % 1000);
+  }
+  cdTick();
 
   // ---- marquee ----
   const words = ['NO FOLLOWERS', 'NO LIKES', 'NO STRANGERS', '24H', '3–6 FRIENDS', 'VOICE', 'PHOTO', 'WIDGET', 'COMING SOON'];
