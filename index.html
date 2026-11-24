@@ -581,7 +581,7 @@ a{color:inherit}
   cdTick();
 
   // ---- marquee ----
-  const words = ['NO FOLLOWERS', 'NO LIKES', 'NO STRANGERS', '24H', '3–6 FRIENDS', 'VOICE', 'PHOTO', 'WIDGET', 'COMING SOON'];
+  const words = ['NO FOLLOWERS', 'NO LIKES', 'NO STRANGERS', '24H', '3–6 FRIENDS', 'VOICE', 'PHOTO', 'WIDGET', Date.now() >= LAUNCH ? 'NOW ON APP STORE' : 'COMING SOON'];
   const mq = $('#mq'); const html = words.map(w => `<span>${w}</span>`).join(''); mq.innerHTML = html + html;
 
   // ---- nav ----

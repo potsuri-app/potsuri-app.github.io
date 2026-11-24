@@ -42,6 +42,7 @@
 
 <main class="pbody">
   <div class="wrap narrow">
+    <article class="news rv" data-after="2026-11-25T15:00:00+09:00" hidden><time datetime="2026-11-25" class="en">2026年11月25日</time><h2>App Storeで公開しました</h2><p>ぽつりをApp Storeで公開しました。iPhoneで無料で使えます。いちばん仲のいい友達と、始めてみてください。<br><a href="https://apps.apple.com/jp/app/id6837517077" target="_blank" rel="noopener">App Storeで見る</a></p></article>
     <article class="news rv"><time datetime="2026-11-22" class="en">2026年11月22日</time><h2>11月25日（水）15時に公開します</h2><p>Appleの審査を通過しました。ぽつりは、2026年11月25日（水）15時にApp Storeで公開します（iPhone・無料）。公開したら、このページとXでお知らせします。</p></article>
     <article class="news rv"><time datetime="2026-11-22" class="en">2026年11月22日</time><h2>公式サイトを公開しました</h2><p>ぽつり（Potsuri）の公式サイトを公開しました。アプリの紹介、使い方、安全への取り組み、よくある質問などを読めます。</p></article>
     <article class="news rv"><time datetime="2026-11-22" class="en">2026年11月22日</time><h2>App Storeでの公開に向けて準備中です</h2><p>いまAppleの審査に出す準備をしています。公開日が決まったら、このページとXでお知らせします。</p></article>
@@ -73,5 +74,6 @@
   qs.forEach(d=>d.addEventListener('toggle',()=>{if(d.open)qs.forEach(o=>{if(o!==d)o.open=false;});}));
 })();
 </script>
+<script>document.querySelectorAll("[data-after]").forEach(function(e){if(Date.now()>=Date.parse(e.dataset.after))e.hidden=false});</script>
 </body>
 </html>
